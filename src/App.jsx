@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/Header'
 import useFetch from "./useFetch"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 function App() {
   const [type,setType]=useState("Both")
@@ -27,7 +28,9 @@ return matchesType&& matchesSearch
 
 
 const displayData=filteredData?.map(event=>(
+  
   <div key={event._id} className="col-md-4 py-3" >
+    <Link id="linkDescription" to={`/${event._id}`} >
     <div className="card border border-0">
     <div className=" position-relative" id="card-img-top">
                 <img
@@ -45,7 +48,9 @@ const displayData=filteredData?.map(event=>(
                 <h5 className="card-title">{event.title}</h5>
             </div>
     </div>
+    </Link>
   </div>
+ 
 ))
   return (
     <div id="bg-color">

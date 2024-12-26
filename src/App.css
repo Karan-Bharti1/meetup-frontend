@@ -28,3 +28,24 @@
 .card-load{
   background-color: lightgrey;
 }
+#linkDescription{
+  text-decoration: none;
+}
+#descriptionImage{
+  width: 70%;
+  height: 300px; 
+  object-fit: cover
+}
+#tag{
+  cursor:default
+}
+.card-des{
+  width:70%;
+}
+.speakerImage{
+  height: 125px;
+  width: 150px;
+}
+.descData{
+  width: 70%
+}
